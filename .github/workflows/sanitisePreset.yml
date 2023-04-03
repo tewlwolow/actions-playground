@@ -27,8 +27,8 @@ jobs:
         git commit -am "Sanitised WA Preset"
         
     - name: Push if applicable
-      run: |
       if: success()
+      run: |
         git push origin main
       env:
         GITHUB_TOKEN: ${{ github.token }}

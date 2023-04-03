@@ -1,10 +1,8 @@
 name: Sanitise Weather Adjuster preset
 on:
   push:
-    branches: ['main/Weather Adjuster.json']
-
-env:
-  GITHUB_TOKEN: ${{ github.token }}
+    branches: 
+      - 'main/Weather Adjuster.json'
 
 jobs:
   build:
@@ -26,6 +24,6 @@ jobs:
         git commit -am "GH ACTION Headlines $(date)"
         git push origin main
       env:
-        REPO_KEY: ${{secrets.GITHUB_TOKEN}}
+        GITHUB_TOKEN: ${{ github.token }}
         username: github-actions
         

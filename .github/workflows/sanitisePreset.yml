@@ -19,7 +19,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
-        token: ${{ secrets.KEY }}
+        persist-credentials: false
  
     - name: Walk and update JSON
       run: |
@@ -33,3 +33,6 @@ jobs:
         git diff-index --cached --quiet HEAD ||
           git commit -am "Sanitised WA Preset"
           git push origin main
+      env:
+        GITHUB_TOKEN: ${{ secrets.KEY }}
+        username: github-actions

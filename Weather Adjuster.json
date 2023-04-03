@@ -177,7 +177,7 @@
           0.50196081399918,
           0.50196081399918
         ],
-        "cloudTexture": "",
+        "cloudTexture": "test/my/things/please.dds",
         "sunSunriseColor": [
           0.72156864404678,
           0.35686275362968,

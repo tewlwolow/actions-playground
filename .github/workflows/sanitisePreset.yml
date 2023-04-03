@@ -1,9 +1,7 @@
 name: Sanitise Weather Adjuster preset
-
 on:
   push:
-    branches: ['main']
-    paths: ['Weather Adjuster.json']
+    branches: ['main/Weather Adjuster.json']
 
 env:
   GITHUB_TOKEN: ${{ github.token }}

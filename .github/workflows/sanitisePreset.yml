@@ -1,17 +1,17 @@
 name: Sanitise Weather Adjuster preset
-env:
-  PRESET: '02 Weather Adjuster preset/MWSE/config/Weather Adjuster.json'
 on:
   push:
     branches:
       - 'main'
     paths:
-      - ${{ env.PRESET }}
+      - 02 Weather Adjuster preset/MWSE/config/Weather Adjuster.json
 
 jobs:
   build:
     name: Sanitise Weather Adjuster preset
     runs-on: ubuntu-latest
+    env:
+      PRESET: 02 Weather Adjuster preset/MWSE/config/Weather Adjuster.json
 
   
     steps:

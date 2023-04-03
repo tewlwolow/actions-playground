@@ -1,10 +1,12 @@
 name: Sanitise Weather Adjuster preset
+env:
+  PRESET: "02 Weather Adjuster preset/MWSE/config/Weather Adjuster.json"
 on:
   push:
     branches:
       - 'main'
     paths:
-      - 02 Weather Adjuster preset/MWSE/config/Weather Adjuster.json
+      - ${{ PRESET }}
 
 jobs:
   build:
@@ -17,7 +19,7 @@ jobs:
  
     - name: Walk and update JSON
       run: |
-        jq 'walk(if type == "object" then with_entries( if .key == "cloudTexture" then .value = "" else . end ) else . end)' 'Weather Adjuster.json' > 'Weather Adjuster_sanitised.json' && mv 'Weather Adjuster_sanitised.json' 'Weather Adjuster.json'
+        jq 'walk(if type == "object" then with_entries( if .key == "cloudTexture" then .value = "" else . end ) else . end)' ${{ PRESET }} > 'Weather Adjuster_sanitised.json' && mv 'Weather Adjuster_sanitised.json' ${{ PRESET }}
     
     - name: Commit and push changes
       run: |

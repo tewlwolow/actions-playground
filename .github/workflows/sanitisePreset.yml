@@ -34,5 +34,5 @@ jobs:
           git commit -am "Sanitised WA Preset"
           git push origin main
       env:
-        GITHUB_TOKEN: ${{ secrets.KEY }}
+        GITHUB_TOKEN: ${{ github.token }}
         username: github-actions

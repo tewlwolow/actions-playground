@@ -177,7 +177,7 @@
           0.50196081399918,
           0.501960815699918
         ],
-        "cloudTexture": "test.dds",
+        "cloudTexture": "",
         "sunSunriseColor": [
           0.72156864404678,
           0.35686275362968,
@@ -452,7 +452,7 @@
           0.50196081399918,
           0.50196081399918
         ],
-        "cloudTexture": "test.png",
+        "cloudTexture": "",
         "sunSunriseColor": [
           0.55294120311737,
           0.42745101451874,

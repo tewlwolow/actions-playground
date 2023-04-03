@@ -17,7 +17,7 @@ jobs:
  
     - name: Walk and update JSON
       run: |
-        jq 'walk(if type == "object" then with_entries( if .key == "cloudTexture" then .value = "" else . end ) else . end)' 'Weather Adjuster.json'
+        jq 'walk(if type == "object" then with_entries( if .key == "cloudTexture" then .value = "" else . end ) else . end)' 'Weather Adjuster.json' > 'Weather Adjuster.json'
     
     - name: Commit and push changes
       run: |

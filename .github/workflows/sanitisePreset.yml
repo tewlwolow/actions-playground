@@ -11,7 +11,7 @@ jobs:
     name: Sanitise Weather Adjuster preset
     runs-on: ubuntu-latest
     env:
-      PRESET: 02 Weather Adjuster preset/MWSE/config/Weather Adjuster.json
+      PRESET: '02 Weather Adjuster preset/MWSE/config/Weather Adjuster.json'
 
   
     steps:

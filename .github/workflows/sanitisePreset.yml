@@ -19,12 +19,16 @@ jobs:
       run: |
         jq 'walk(if type == "object" then with_entries( if .key == "cloudTexture" then .value = "" else . end ) else . end)' 'Weather Adjuster.json' > 'Weather Adjuster_sanitised.json' && mv 'Weather Adjuster_sanitised.json' 'Weather Adjuster.json'
     
-    - name: Commit and push changes
+    - name: Commit changes
       run: |
         git config --local user.name actions-user
         git config --local user.email "actions@github.com"
         git add .
         git commit -am "Sanitised WA Preset"
+        
+    - name: Push if applicable
+      run: |
+      if: success()
         git push origin main
       env:
         GITHUB_TOKEN: ${{ github.token }}

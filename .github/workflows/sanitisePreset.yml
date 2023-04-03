@@ -1,12 +1,12 @@
 name: Sanitise Weather Adjuster preset
 env:
-  PRESET: 02 Weather Adjuster preset/MWSE/config/Weather Adjuster.json
+  PRESET: "02 Weather Adjuster preset/MWSE/config/Weather Adjuster.json"
 on:
   push:
     branches:
       - 'main'
     paths:
-      - ${{ PRESET }}
+      - 02 Weather Adjuster preset/MWSE/config/Weather Adjuster.json
 
 jobs:
   build:

@@ -1,6 +1,4 @@
 name: Sanitise Weather Adjuster preset
-env:
-  PRESET: "02 Weather Adjuster preset/MWSE/config/Weather Adjuster.json"
 on:
   push:
     branches:
@@ -12,6 +10,9 @@ jobs:
   build:
     name: Sanitise Weather Adjuster preset
     runs-on: ubuntu-latest
+    env:
+      PRESET: 02 Weather Adjuster preset/MWSE/config/Weather Adjuster.json
+  
     steps:
     
     - name: Checkout code

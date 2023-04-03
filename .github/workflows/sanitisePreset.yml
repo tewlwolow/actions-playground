@@ -4,7 +4,7 @@ on:
     branches:
       - 'main'
     paths:
-      - Weather Adjuster.json
+      - 02 Weather Adjuster preset/MWSE/config/Weather Adjuster.json
 
 jobs:
   build:
